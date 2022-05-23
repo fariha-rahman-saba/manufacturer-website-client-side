@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "user_name": "Alex",
+        "image": "https://img.freepik.com/free-photo/handsome-businessman-suit-glasses-cross-arms-chest-look_176420-21750.jpg?t=st=1649156379~exp=1649156979~hmac=2289bbe47e845f7b7a6400a96defae0d9b70c88bf26724aa4ce5383c34db950c&w=900",
+        "review_detail": "If you're a mere beginner, then you can trust this girl and can put your time into her content. I can assure you that it'll be worth it.",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "user_name": "Morgan",
+        "image": "https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?t=st=1649156379~exp=1649156979~hmac=f9105a4809f4d056d2a789b5709507ad93160a6d820bff4927f0ca8a0c68a8e3&w=900",
+        "review_detail": "For everyone who wants to level up their #Coding and #Dev skills - seriously, she is the best teacher for you",
+        "rating": 4.2
+    },
+    {
+        "id": 3,
+        "user_name": "Eva",
+        "image": "https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?w=900&t=st=1649079714~exp=1649080314~hmac=63f866753a24292b79bdf640685408eaf6a34aacf7fb8ad07a1430a394323955",
+        "review_detail": "Both basic and advanced stacks are covered, and one can learn according to his skill levels",
+        "rating": 3.9
+    }
+]

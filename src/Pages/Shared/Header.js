@@ -37,7 +37,7 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
+                    <a className="btn btn-ghost normal-case text-xl">Tools Manufacturer</a>
                 </div>
                 {/* For large device dropdown hidden */}
                 <div className="navbar-center hidden lg:flex">
