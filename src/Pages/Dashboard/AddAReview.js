@@ -14,13 +14,14 @@ const AddAReview = () => {
         const rating = event.target.rating.value;
         const desc = event.target.desc.value;
 
-        const email = user.email;
+        const displayName = user.displayName;
+        // const displayName = user.displayName;
 
 
         // console.log(image, name, short_desc, price, quantity, supplierName, sold);
 
         const url = 'http://localhost:5000/review';
-        const review = { email, rating, desc };
+        const review = { displayName, rating, desc };
 
 
 
