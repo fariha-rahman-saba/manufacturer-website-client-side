@@ -16,6 +16,7 @@ import NotFound from './Pages/NotFound';
 import MyPortfolio from './Pages/MyPortfolio';
 import BrowseTools from './Pages/BrowseTools';
 import AddAProduct from './Pages/Dashboard/AddAProduct';
+import Payment from './Pages/Dashboard/Payment';
 
 function App () {
   return (
@@ -33,6 +34,7 @@ function App () {
         {/* Private Routes */}
         <Route path='/purchase/:id' element={<RequireAuth><Purchase /></RequireAuth>}></Route>
         <Route path='/browse-tools' element={<RequireAuth><BrowseTools /></RequireAuth>}></Route>
+        <Route path='/payment/:id' element={<RequireAuth><Payment /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders />}></Route>
           <Route path="addReview" element={<AddAReview />}></Route>

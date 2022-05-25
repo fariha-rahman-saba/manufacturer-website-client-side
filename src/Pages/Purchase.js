@@ -5,7 +5,7 @@ import auth from '../firebase.init';
 
 const Purchase = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/${id}`;
+    const url = `http://localhost:5000/purchase/${id}`;
     const [tool, setTool] = useState({});
 
     const [user, loading, error] = useAuthState(auth);
@@ -17,6 +17,20 @@ const Purchase = () => {
             .then(data => setTool(data));
     }, []);
     console.log("Tool: ", tool);
+
+    // const { id } = useParams();
+    // const url = `http://localhost:5000/purchase/${id}`;
+
+    // // const url = `https://secret-dusk-46242.herokuapp.com/booking/${id}`;
+
+    // const { data: tool, isLoading } = useQuery(['purchase', id], () => fetch(url, {
+    //     method: 'GET',
+    //     // headers: {
+    //     //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+    //     // }
+    // }).then(res => res.json()));
+
+
     return (
         <div>
             <img src={tool.image} alt="" width="200px" height="200px" />
