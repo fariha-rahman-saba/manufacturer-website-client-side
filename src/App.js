@@ -27,7 +27,7 @@ function App () {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-portfolio" element={<MyPortfolio />} />
-        <Route path="/add-a-product" element={<AddAProduct />}></Route>
+        <Route path="/addProduct" element={<AddAProduct />}></Route>
         <Route path="/*" element={<NotFound />} />
 
         {/* Private Routes */}
@@ -35,7 +35,7 @@ function App () {
         <Route path='/browse-tools' element={<RequireAuth><BrowseTools /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders />}></Route>
-          <Route path="add-a-review" element={<AddAReview />}></Route>
+          <Route path="addReview" element={<AddAReview />}></Route>
           <Route path="my-profile" element={<MyProfile />}></Route>
 
         </Route>
