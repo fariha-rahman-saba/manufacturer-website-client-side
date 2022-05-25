@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Complete Python Mastery",
         "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BFMMlbcQvml9HSqXcvNp",
         "short_desc": "Everything you need to program in Python in one course (includes 3 real-world projects)",
@@ -9,7 +8,6 @@
         "price_per_unit": "$14.99"
     },
     {
-        "id": 2,
         "name": "The Ultimate HTML/CSS Mastery Series",
         "image": "https://www.filepicker.io/api/file/INZsH6XtRIqQqxvYGP6Q",
         "short_desc": "Everything you need to build fast and beautiful websites with HTML5 and CSS3 in one bundle",
@@ -18,7 +16,6 @@
         "price_per_unit": "$14.99"
     },
     {
-        "id": 3,
         "name": "The Ultimate Java Mastery Series",
         "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/t12BZqmRoulvCTDhoYie",
         "short_desc": "From Java zero to hero - Master the world's most popular coding language",
@@ -27,7 +24,6 @@
         "price_per_unit": "$14.99"
     },
     {
-        "id": 4,
         "name": "The Ultimate React Native Series",
         "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/4C6yPDywSUeWYLyg1h9G",
         "short_desc": "Everything you need to build and distribute professional-quality apps with React Native",
@@ -36,7 +32,6 @@
         "price_per_unit": "$14.99"
     },
     {
-        "id": 5,
         "name": "The Ultimate Design Patterns",
         "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/rPqIrBIbRZsdQhtoGnjp",
         "short_desc": "Learn to design maintainable, extensible object-oriented software with confidence",
@@ -45,7 +40,54 @@
         "price_per_unit": "$14.99"
     },
     {
-        "id": 6,
+        "name": "The Ultimate Data Structures & Algorithms Course",
+        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/FjpqrSFwSvGCTL3cCqPt",
+        "short_desc": "Ace your coding job interview. Learn to write better and faster code.",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
+        "name": "Complete Python Mastery",
+        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BFMMlbcQvml9HSqXcvNp",
+        "short_desc": "Everything you need to program in Python in one course (includes 3 real-world projects)",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
+        "name": "The Ultimate HTML/CSS Mastery Series",
+        "image": "https://www.filepicker.io/api/file/INZsH6XtRIqQqxvYGP6Q",
+        "short_desc": "Everything you need to build fast and beautiful websites with HTML5 and CSS3 in one bundle",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
+        "name": "The Ultimate Java Mastery Series",
+        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/t12BZqmRoulvCTDhoYie",
+        "short_desc": "From Java zero to hero - Master the world's most popular coding language",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
+        "name": "The Ultimate React Native Series",
+        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/4C6yPDywSUeWYLyg1h9G",
+        "short_desc": "Everything you need to build and distribute professional-quality apps with React Native",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
+        "name": "The Ultimate Design Patterns",
+        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/rPqIrBIbRZsdQhtoGnjp",
+        "short_desc": "Learn to design maintainable, extensible object-oriented software with confidence",
+        "minimum_order_quantity": "5",
+        "available_quantity": "5",
+        "price_per_unit": "$14.99"
+    },
+    {
         "name": "The Ultimate Data Structures & Algorithms Course",
         "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/FjpqrSFwSvGCTL3cCqPt",
         "short_desc": "Ace your coding job interview. Learn to write better and faster code.",

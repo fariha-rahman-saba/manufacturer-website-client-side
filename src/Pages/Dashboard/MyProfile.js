@@ -1,5 +1,5 @@
 // import React from 'react';
-// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useAuthState, useUpdateProfile } from 'react-firebase-hooks/auth';
 // import auth from '../firebase.init';
 
 // const MyProfile = () => {
@@ -11,7 +11,7 @@
 
 //     // const { register, formState: { errors }, handleSubmit } = useForm();
 
-//     const onSubmit = event => {
+//     const handleSubmit = (event) => {
 //         event.preventDefault();
 
 //         const education = event.target.education.value;
@@ -23,7 +23,7 @@
 
 //         // console.log(image, name, short_desc, price, quantity, supplierName, sold);
 
-//         const url = 'https://localhost:5000';
+//         const url = 'https://localhost:5000/user';
 //         const updatedUser = { email, displayName, phone, linkedinProfile, education, location };
 
 
@@ -34,7 +34,7 @@
 //         <div>
 //             <h1>Name: {user.displayName}</h1>
 //             <h3>Email: {user.email}</h3>
-//             <form onSubmit={handleSubmit(onSubmit)}>
+//             <form onSubmit={handleSubmit}>
 //                 <div className="form-group mt-3">
 //                     <input type="text" name='image' className="form-control" placeholder="Image URL" required />
 //                 </div>

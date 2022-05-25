@@ -1,8 +1,9 @@
 import React from 'react';
+import './styles/footer.css';
 
 const Footer = () => {
     return (
-        <p>Copyright © {(new Date().getFullYear())}</p>
+        <p className='footer'>Copyright © {(new Date().getFullYear())}</p>
     );
 };
 

@@ -23,7 +23,7 @@ function App () {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
 
-        {/* Provate Routes */}
+        {/* Private Routes */}
         <Route path="purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders />}></Route>
