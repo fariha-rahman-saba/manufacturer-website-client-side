@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Blogs from './Pages/Blogs';
+import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -12,6 +12,9 @@ import Header from './Pages/Shared/Header';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddAReview from './Pages/Dashboard/AddAReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import NotFound from './Pages/NotFound';
+import MyPortfolio from './Pages/MyPortfolio';
+import BrowseTools from './Pages/BrowseTools';
 
 function App () {
   return (
@@ -19,12 +22,15 @@ function App () {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/my-portfolio" element={<MyPortfolio />} />
+        <Route path="/*" element={<NotFound />} />
 
         {/* Private Routes */}
-        <Route path="purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>}></Route>
+        <Route path='/purchase/:id' element={<RequireAuth><Purchase /></RequireAuth>}></Route>
+        <Route path='/browse-tools' element={<RequireAuth><BrowseTools /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders />}></Route>
           <Route path="add-a-review" element={<AddAReview />}></Route>

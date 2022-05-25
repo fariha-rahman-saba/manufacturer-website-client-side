@@ -1,48 +1,34 @@
-// import React, { useEffect, useState } from 'react';
-// import { useAuthState } from 'react-firebase-hooks/auth';
-// import { useParams } from 'react-router-dom';
-// import auth from '../firebase.init';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useParams } from 'react-router-dom';
+import auth from '../firebase.init';
 
-// const Purchase = (_id) => {
-//     const { id } = useParams();
-//     const url = `http://localhost:5000/${_id}`;
-//     const [item, setItem] = useState({});
+const Purchase = () => {
+    const { id } = useParams();
+    const url = `http://localhost:5000/${id}`;
+    const [tool, setTool] = useState({});
 
-//     const [user, loading, error] = useAuthState(auth);
+    const [user, loading, error] = useAuthState(auth);
 
 
-//     useEffect(() => {
-//         fetch(url)
-//             .then(res => res.json())
-//             .then(data => setItem(data));
-//     }, []);
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setTool(data));
+    }, []);
+    console.log("Tool: ", tool);
+    return (
+        <div>
+            <img src={tool.image} alt="" width="200px" height="200px" />
+            <h4 className='mt-3'>Name: {tool.name}</h4>
+            <p>Description: {tool.short_desc}</p>
+            <h5>Price per unit: ${tool.price_per_unit}</h5>
+            <h5>Available Quantity: <span id='quantityValue'>{tool.available_quantity}</span></h5>
+            <h5>Minimum Order Quantity: {tool.minimum_order_quantity}</h5>
+            {/* <button id='delivered-btn' type="submit" onClick={handleDelivered} className="btn btn-secondary mt-3 w-25">Delivered</button> */}
+            {/* <ToastContainer/></ToastContainer> */}
+        </div>
+    );
+};
 
-//     return (
-//         <div>
-//             <input type="checkbox" id="booking-modal" className="modal-toggle" />
-//             <div className="modal modal-bottom sm:modal-middle">
-//                 <div className="modal-box">
-//                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-//                     <h3 className="font-bold text-lg text-secondary">Booking for: {name}</h3>
-//                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-//                         <input type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full max-w-xs" />
-//                         <select name="slot" className="select select-bordered w-full max-w-xs">
-//                             {
-//                                 slots.map((slot, index) => <option
-//                                     key={index}
-//                                     value={slot}
-//                                 >{slot}</option>)
-//                             }
-//                         </select>
-//                         <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
-//                         <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
-//                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
-//                         <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
-//                     </form>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Purchase;
+export default Purchase;

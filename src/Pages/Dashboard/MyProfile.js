@@ -35,32 +35,18 @@
 //             <h1>Name: {user.displayName}</h1>
 //             <h3>Email: {user.email}</h3>
 //             <form onSubmit={handleSubmit}>
-//                 <div className="form-group mt-3">
-//                     <input type="text" name='image' className="form-control" placeholder="Image URL" required />
-//                 </div>
-//                 <div className="form-group mt-3">
-//                     <input type="text" className="form-control" name='name' placeholder="Item Name" required />
-//                 </div>
-//                 <div className="form-group mt-3">
-//                     <input type="text" className="form-control" name='short_desc' placeholder="Short description" required />
-//                 </div>
-//                 <div className="form-group mt-3">
-//                     <input type="text" className="form-control" name='price' placeholder="Price" required />
-//                 </div>
-//                 <div className="form-group mt-3">
-//                     <input type="number" className="form-control" name='quantity' placeholder="Quantity" required />
-//                 </div>
-//                 <div className="form-group mt-3">
-//                     <input type="text" className="form-control" name='supplierName' placeholder="Supplier Name" required />
-//                 </div>
+
+//                 <input type="text" placeholder="Education" className="input input-bordered w-full mt-6 max-w-xs" name='education' />
+
+//                 <input type="text" placeholder="Location" className="input input-bordered w-full mt-6 max-w-xs" name='location' />
+
+//                 <input type="text" placeholder="Phone Number" className="input input-bordered w-full mt-6 max-w-xs" name='phone' />
+
+//                 <input type="text" placeholder="LinkedIn Profile Link" className="input input-bordered w-full mt-6 max-w-xs" name='linkedinProfile' />
 
 
-//                 <div className="form-check mt-3 d-flex ">
-//                     <input className='mt-2 me-2' onClick={() => setSold(!sold)} type="checkbox" name="sold" />
-//                     <div>Sold</div>
-//                 </div>
-//                 <button type="submit" className="btn btn-secondary mt-3 w-100 mb-5">Add Item</button>
-//                 <ToastContainer></ToastContainer>
+//                 <button type="submit" className="btn btn-secondary mt-3 w-100 mb-5">Update Profile</button>
+//                 {/* <ToastContainer></ToastContainer> */}
 
 //             </form>
 //         </div>
