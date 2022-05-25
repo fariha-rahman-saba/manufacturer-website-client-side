@@ -33,7 +33,7 @@ const Signup = () => {
     }
 
     if (token) {
-        navigate('/browse-tools');
+        navigate('/');
     }
 
     const onSubmit = async data => {

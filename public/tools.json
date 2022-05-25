@@ -45,7 +45,7 @@
         "short_desc": "Ace your coding job interview. Learn to write better and faster code.",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "Complete Python Mastery",
@@ -53,7 +53,7 @@
         "short_desc": "Everything you need to program in Python in one course (includes 3 real-world projects)",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "The Ultimate HTML/CSS Mastery Series",
@@ -61,7 +61,7 @@
         "short_desc": "Everything you need to build fast and beautiful websites with HTML5 and CSS3 in one bundle",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "The Ultimate Java Mastery Series",
@@ -69,7 +69,7 @@
         "short_desc": "From Java zero to hero - Master the world's most popular coding language",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "The Ultimate React Native Series",
@@ -77,7 +77,7 @@
         "short_desc": "Everything you need to build and distribute professional-quality apps with React Native",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "The Ultimate Design Patterns",
@@ -85,7 +85,7 @@
         "short_desc": "Learn to design maintainable, extensible object-oriented software with confidence",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     },
     {
         "name": "The Ultimate Data Structures & Algorithms Course",
@@ -93,6 +93,6 @@
         "short_desc": "Ace your coding job interview. Learn to write better and faster code.",
         "minimum_order_quantity": "5",
         "available_quantity": "5",
-        "price_per_unit": "$14.99"
+        "price_per_unit": "14.99"
     }
 ]

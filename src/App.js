@@ -15,6 +15,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import NotFound from './Pages/NotFound';
 import MyPortfolio from './Pages/MyPortfolio';
 import BrowseTools from './Pages/BrowseTools';
+import AddAProduct from './Pages/Dashboard/AddAProduct';
 
 function App () {
   return (
@@ -26,6 +27,7 @@ function App () {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-portfolio" element={<MyPortfolio />} />
+        <Route path="/add-a-product" element={<AddAProduct />}></Route>
         <Route path="/*" element={<NotFound />} />
 
         {/* Private Routes */}
@@ -35,7 +37,12 @@ function App () {
           <Route index element={<MyOrders />}></Route>
           <Route path="add-a-review" element={<AddAReview />}></Route>
           <Route path="my-profile" element={<MyProfile />}></Route>
+
         </Route>
+
+        {/* Admin Routes */}
+        {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route> */}
+        {/* <Route path="users" element={<RequireAdmin><></RequireAdmin>}></Route> */}
       </Routes>
       <Footer />
     </div>
