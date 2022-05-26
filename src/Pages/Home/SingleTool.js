@@ -10,8 +10,11 @@ const SingleTool = ({ tool }) => {
         navigate(`/purchase/${_id}`);
     };
     return (
-        <div className='tool'>
-            <img className='' src={image} alt="" width="200px" height="130px" />
+        <div className=''>
+            <figure class="text-center">
+                <img className='' src={image} alt="" width="200px" height="130px" />
+            </figure>
+
             <h4 className='mt-3'>{name}</h4>
             <p>{short_desc}</p>
             <h5>{minimum_order_quantity}</h5>

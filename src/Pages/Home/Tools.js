@@ -6,6 +6,8 @@ import './styles/tools.css';
 const Tools = () => {
 
     const [tools, setTools] = useState([]);
+    const [product, setProduct] = useState(null);
+
     useEffect(() => {
         fetch('http://localhost:5000/tool')
             .then(res => res.json())
@@ -23,7 +25,10 @@ const Tools = () => {
             <h1 className='mt-5'>Tools</h1>
             <div className='tools'>
                 {
-                    displayTools.map(tool => <SingleTool key={tool.id} tool={tool}></SingleTool>)
+                    displayTools.map(tool => <SingleTool
+                        key={tool.id}
+                        tool={tool}
+                    ></SingleTool>)
                 }
             </div>
             <button className="btn btn-active mt-6 btn-accent w-full max-w-xs" onClick={() => goToBrowseTools()}>Browse Tools</button>

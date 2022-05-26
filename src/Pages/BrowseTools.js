@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SingleTool from './Home/SingleTool';
+import '../styles/browseTools.css';
 
 const BrowseTools = () => {
+    const [tools, setTools] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/tool')
+            .then(res => res.json())
+            .then(data => setTools(data));
+    }, []);
     return (
         <div>
-            THis is browse tools
+            <h1 className='mt-5 mb-3'>All Tools</h1>
+            <div className='all-tools'>
+                {
+                    tools.map(tool => <SingleTool key={tool._id} tool={tool}></SingleTool>)
+
+                }
+            </div>
         </div>
     );
 };
