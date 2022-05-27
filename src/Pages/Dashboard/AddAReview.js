@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AddAReview = () => {
 
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -15,10 +15,6 @@ const AddAReview = () => {
         const desc = event.target.desc.value;
 
         const displayName = user.displayName;
-        // const displayName = user.displayName;
-
-
-        // console.log(image, name, short_desc, price, quantity, supplierName, sold);
 
         const url = 'http://localhost:5000/review';
         const review = { displayName, rating, desc };

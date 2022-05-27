@@ -21,6 +21,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 
 function App () {
   return (
@@ -43,7 +46,12 @@ function App () {
           <Route index element={<MyOrders />}></Route>
           <Route path="addReview" element={<AddAReview />}></Route>
           <Route path="my-profile" element={<MyProfile />}></Route>
+
           <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
+          <Route path="addProduct" element={<RequireAdmin><AddAProduct /></RequireAdmin>}></Route>
+          <Route path="make-admin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>}></Route>
+          <Route path="manage-tools" element={<RequireAdmin><ManageProducts /></RequireAdmin>}></Route>
+          <Route path="manage-orders" element={<RequireAdmin><ManageAllOrders /></RequireAdmin>}></Route>
 
         </Route>
 
