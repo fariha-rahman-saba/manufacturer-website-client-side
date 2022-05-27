@@ -83,7 +83,7 @@ const Purchase = () => {
             <h4 className='mt-3'>Name: {tool.name}</h4>
             <p>Description: {tool.short_desc}</p>
 
-            <label for="order-modal" class="btn modal-button">Place Order</label>
+            <label for="order-modal" className="btn modal-button">Place Order</label>
 
             <input type="checkbox" id="order-modal" className="modal-toggle" />
 
