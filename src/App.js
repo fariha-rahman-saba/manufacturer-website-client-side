@@ -20,6 +20,7 @@ import Payment from './Pages/Dashboard/Payment';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 function App () {
   return (
@@ -42,7 +43,7 @@ function App () {
           <Route index element={<MyOrders />}></Route>
           <Route path="addReview" element={<AddAReview />}></Route>
           <Route path="my-profile" element={<MyProfile />}></Route>
-          <Route path="users" element={<Users />}></Route>
+          <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
 
         </Route>
 
