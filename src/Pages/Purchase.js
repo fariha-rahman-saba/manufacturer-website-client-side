@@ -18,32 +18,26 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setTool(data));
     }, []);
+
     console.log("Tool: ", tool);
 
     const navigate = useNavigate();
-
-    const goToPayment = _id => {
-        navigate(`/payment/${_id}`);
-    };
 
     const { _id, name, price_per_unit, minimum_order_quantity } = tool;
 
     const handleOrder = event => {
         event.preventDefault();
-        // const slot = event.target.slot.value;
 
         const order = {
             toolId: _id,
             tool: name,
-            // date: formattedDate,
-            // slot,
             price_per_unit,
             customerEmail: user.email,
             customerName: user.displayName,
             phone: event.target.phone.value
         };
 
-        fetch('https://localhost:5000/order', {
+        fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -52,15 +46,11 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.success) {
-                    // toast(`Appointment is set, ${formattedDate} at ${slot}`)
-                }
-                else {
-                    // toast.error(`Already have and appointment on ${data.booking?.date} at ${data.booking?.slot}`)
-                }
-                // setTreatment(null);
-                // refetch();
+                console.log(data);
+                navigate(`/payment/${_id}`);
             });
+
+
     };
 
     // const { id } = useParams();

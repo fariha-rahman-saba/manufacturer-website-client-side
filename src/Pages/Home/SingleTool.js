@@ -11,9 +11,8 @@ const SingleTool = ({ tool }) => {
     };
     return (
         <div className=''>
-            <figure class="text-center">
-                <img className='' src={image} alt="" width="200px" height="130px" />
-            </figure>
+
+            <img className='lg:max-w-lg' src={image} alt="" width="200px" height="130px" />
 
             <h4 className='mt-3'>{name}</h4>
             <p>{short_desc}</p>

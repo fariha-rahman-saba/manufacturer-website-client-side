@@ -17,6 +17,8 @@ import MyPortfolio from './Pages/MyPortfolio';
 import BrowseTools from './Pages/BrowseTools';
 import AddAProduct from './Pages/Dashboard/AddAProduct';
 import Payment from './Pages/Dashboard/Payment';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App () {
   return (
@@ -47,6 +49,8 @@ function App () {
         {/* <Route path="users" element={<RequireAdmin><></RequireAdmin>}></Route> */}
       </Routes>
       <Footer />
+
+      <ToastContainer />
     </div>
   );
 }
