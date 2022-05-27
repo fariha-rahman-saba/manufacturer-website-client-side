@@ -14,27 +14,25 @@ const Payment = () => {
 
 
     const { id } = useParams();
-    // const [tool, setTool] = useState({});
-    // const url = `http://localhost:5000/payment/${id}`;
+    const [tool, setTool] = useState({});
+    const url = `http://localhost:5000/payment/${id}`;
     const [user, loading, error] = useAuthState(auth);
 
 
-    // useEffect(() => {
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setTool(data));
-    // }, []);
-    // console.log("Tool: ", tool);
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setTool(data));
+    }, []);
+    console.log("Tool: ", tool);
 
     return (
         <div>
             <h1 className='text-3xl'>Pay</h1>
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                 <div className="card-body">
-                    tHIS IS PAYMENT
                     <Elements stripe={stripePromise}>
-                        {/* <CheckoutForm appointment={appointment} /> */}
-                        {/* <CheckoutForm tool={tool} /> */}
+                        <CheckoutForm tool={tool} />
                     </Elements>
                 </div>
             </div>
