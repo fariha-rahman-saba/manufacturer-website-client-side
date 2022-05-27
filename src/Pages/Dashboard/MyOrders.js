@@ -10,7 +10,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://localhost:5000?user=${user.email}`, {
+            fetch(`http://localhost:5000/order?customerEmail=${user.email}`, {
                 method: 'GET',
                 // headers: {
                 //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -40,9 +40,7 @@ const MyOrders = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Treatment</th>
+                            <th>Tool</th>
                             <th>Payment</th>
                         </tr>
                     </thead>
@@ -50,10 +48,8 @@ const MyOrders = () => {
                         {
                             orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
-                                <td>{order.patientName}</td>
-                                <td>{order.date}</td>
-                                <td>{order.slot}</td>
-                                <td>{order.treatment}</td>
+                                <td>{order.customerName}</td>
+                                <td>{order.tool}</td>
                                 <td>
                                     {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
                                     {(order.price && order.paid) && <div>
