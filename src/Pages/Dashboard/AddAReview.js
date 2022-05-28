@@ -16,7 +16,7 @@ const AddAReview = () => {
 
         const displayName = user.displayName;
 
-        const url = 'https://fathomless-basin-14338.herokuapp.com/review';
+        const url = 'http://localhost:5000/review';
         const review = { displayName, rating, desc };
 
 

@@ -8,7 +8,7 @@ const Reviews = () => {
     // load reviews
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://fathomless-basin-14338.herokuapp.com/review')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

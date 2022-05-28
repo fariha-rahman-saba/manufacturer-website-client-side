@@ -5,7 +5,7 @@ const Users = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://fathomless-basin-14338.herokuapp.com/user',
+        fetch('http://localhost:5000/user',
             {
                 method: 'GET',
                 headers: {

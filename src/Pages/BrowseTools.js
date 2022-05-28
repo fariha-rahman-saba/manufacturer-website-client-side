@@ -5,7 +5,7 @@ import '../styles/browseTools.css';
 const BrowseTools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('https://fathomless-basin-14338.herokuapp.com/tool')
+        fetch('http://localhost:5000/tool')
             .then(res => res.json())
             .then(data => setTools(data));
     }, []);
