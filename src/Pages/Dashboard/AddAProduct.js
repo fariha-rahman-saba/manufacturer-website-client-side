@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddAProduct = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -26,7 +26,7 @@ const AddAProduct = () => {
             method: 'POST',
             body: JSON.stringify(product),
             headers: {
-                'authorization': `${user.email}`,
+                // 'authorization': `${user.email}`,
                 'Content-type': 'application/json; charset=UTF-8',
 
             },

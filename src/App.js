@@ -41,7 +41,6 @@ function App () {
         <Route path='/browse-tools' element={<RequireAuth><BrowseTools /></RequireAuth>}></Route>
         <Route path='/payment/:id' element={<RequireAuth><Payment /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
-          {/* <Route index element={<MyProfile></MyProfile>}></Route> */}
 
           <Route path="my-profile" element={<MyProfile />}></Route>
           <Route path="my-orders" element={<MyOrders />}></Route>
