@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
@@ -16,16 +16,16 @@ const ManageProducts = () => {
         if (user) {
             fetch(`https://fathomless-basin-14338.herokuapp.com/tool`, {
                 method: 'GET',
-                // headers: {
-                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                // }
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
             })
                 .then(res => {
-                    // if (res.status === 401 || res.status === 403) {
-                    //     signOut(auth);
-                    //     localStorage.removeItem('accessToken');
-                    //     navigate('/');
-                    // }
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
+                    }
                     return res.json();
                 })
                 .then(data => {
@@ -38,9 +38,9 @@ const ManageProducts = () => {
     const handleCancel = (id) => {
         fetch(`https://fathomless-basin-14338.herokuapp.com/tool/${id}`, {
             method: 'DELETE',
-            // headers: {
-            //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {

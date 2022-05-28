@@ -70,30 +70,11 @@ const ManageAllOrders = () => {
                                 <td>
                                     {!order.paid &&
                                         <>
-                                            {/* <Link to={`/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link> */}
-
                                             <button className='btn btn-xs btn-success'>Unpaid</button>
-
-                                            {/* <input type="checkbox" id="order-delete-confirm-modal" className="modal-toggle" />
-                                            <div className="modal modal-bottom sm:modal-middle">
-                                                <div className="modal-box">
-                                                    <label for="order-delete-confirm-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-
-                                                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to cancel the order?</h3>
-
-                                                    <div className="modal-action">
-                                                        <label for="order-delete-confirm-modal">
-                                                            <button onClick={() => handleCancel(order._id)} className="btn btn-xs 
-                    btn-error">Confirm</button>
-                                                        </label> */}
-                                            {/* </div> */}
-                                            {/* </div> */}
-                                            {/* </div> */}
                                         </>
                                     }
                                     {order.paid && <div>
                                         <p><span className='text-success'>Update Status</span></p>
-                                        {/* <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p> */}
                                     </div>}
                                 </td>
                             </tr>)

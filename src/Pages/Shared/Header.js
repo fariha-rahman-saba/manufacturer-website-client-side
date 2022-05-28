@@ -3,10 +3,13 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useAdmin from '../../hooks/useAdmin';
 
 const Header = () => {
 
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
+
 
     const logout = () => {
         signOut(auth);
@@ -26,6 +29,24 @@ const Header = () => {
             <div className='uppercase
             '>{user.displayName}</div>
             <button className="btn btn-ghost" onClick={logout} >Sign Out</button></> : <Link to="/login">Login</Link>}</li>
+    </>;
+
+    const dashboardItems = <>
+
+        <li><Link to="/dashboard/my-profile">My Profile</Link></li>
+        {
+            !admin && <>
+                <li><Link to="/dashboard/my-orders">My Orders</Link></li>
+                <li><Link to="/dashboard/addReview">Add Review</Link></li>
+            </>
+        }
+
+        {admin && <>
+            <li><Link to="/dashboard/make-admin">Make Admin</Link></li>
+            <li><Link to="/dashboard/addProduct">Add Tool</Link></li>
+            <li><Link to="/dashboard/manage-tools">Manage Tools</Link></li>
+            <li><Link to="/dashboard/manage-orders">Manage Orders</Link></li>
+        </>}
     </>;
 
     return (
@@ -60,8 +81,8 @@ const Header = () => {
                         <label tabIndex="1" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-accent rounded-box w-52">
-                            {menuItems}
+                        <ul tabIndex="1" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-accent rounded-box w-52">
+                            {dashboardItems}
                         </ul>
                     </div>
                 </div>

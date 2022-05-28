@@ -15,9 +15,9 @@ const MyOrders = () => {
         if (user) {
             fetch(`https://fathomless-basin-14338.herokuapp.com/order?customerEmail=${user.email}`, {
                 method: 'GET',
-                // headers: {
-                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                // }
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
             })
                 .then(res => {
                     console.log('res', res);

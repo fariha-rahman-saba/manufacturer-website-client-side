@@ -26,7 +26,7 @@ const AddAProduct = () => {
             method: 'POST',
             body: JSON.stringify(product),
             headers: {
-                // 'authorization': `${user.email}`,
+                'authorization': `${user.email}`,
                 'Content-type': 'application/json; charset=UTF-8',
 
             },
