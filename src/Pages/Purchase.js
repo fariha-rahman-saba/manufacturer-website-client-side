@@ -23,7 +23,7 @@ const Purchase = () => {
 
     const navigate = useNavigate();
 
-    const { _id, name, price_per_unit, minimum_order_quantity } = tool;
+    const { _id, name, price_per_unit, minimum_order_quantity, short_desc, image, available_quantity } = tool;
 
     const handleOrder = event => {
         event.preventDefault();
@@ -41,6 +41,7 @@ const Purchase = () => {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
+                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(order)
         })
@@ -53,37 +54,29 @@ const Purchase = () => {
 
     };
 
-    // const { id } = useParams();
-    // const url = `http://localhost:5000/purchase/${id}`;
-
-    // // const url = `https://secret-dusk-46242.herokuapp.com/booking/${id}`;
-
-    // const { data: tool, isLoading } = useQuery(['purchase', id], () => fetch(url, {
-    //     method: 'GET',
-    //     // headers: {
-    //     //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-    //     // }
-    // }).then(res => res.json()));
-
 
     return (
-        // <div>
-        // {/* <img src={tool.image} alt="" width="200px" height="200px" />
-        // <h4 className='mt-3'>Name: {tool.name}</h4>
-        // <p>Description: {tool.short_desc}</p>
-        // <h5>Price per unit: ${tool.price_per_unit}</h5>
-        // <h5>Available Quantity: <span id='quantityValue'>{tool.available_quantity}</span></h5>
-        // <h5>Minimum Order Quantity: {tool.minimum_order_quantity}</h5>
-        // <button id='delivered-btn' type="submit" onClick={() => goToPayment(tool._id)} className="btn btn-secondary mt-3 w-25">Place Order</button> */}
-        // {/* <ToastContainer/></ToastContainer> */}
 
 
         <div>
-            <img src={tool.image} alt="" width="200px" height="200px" />
-            <h4 className='mt-3'>Name: {tool.name}</h4>
-            <p>Description: {tool.short_desc}</p>
 
-            <label for="order-modal" className="btn btn-secondary modal-button text-white mt-5 mb-6">Place Order</label>
+            <div class="card w-90 bg-base-100 mt-10">
+                <figure><img src={image} alt="tool image" /></figure>
+                <div class="card-body">
+                    <h4 className='mt-3 text-xl font-semibold'>{name}</h4>
+                    <p>{short_desc}</p>
+                    <h5 className=''>Minimum Order Quantity: {minimum_order_quantity}</h5>
+                    <h5 className=''>Available Quantity: {available_quantity}</h5>
+                    <h5 className=''>Price Per Unit: {price_per_unit}</h5>
+
+
+                </div>
+
+            </div>
+
+            <label for="order-modal" className="btn btn-secondary modal-button text-white mt-5 mb-10 w-60">Place Order</label>
+
+
 
             <input type="checkbox" id="order-modal" className="modal-toggle" />
 
@@ -98,11 +91,11 @@ const Purchase = () => {
 
                         <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
 
-                        <input type="text" name="order_quantity" value={minimum_order_quantity} className="input input-bordered w-full max-w-xs" />
+                        <input type="text" required name="order_quantity" value={minimum_order_quantity} className="input input-bordered w-full max-w-xs" />
 
-                        <input type="text" name="address" placeholder="Address" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" required name="address" placeholder="Address" className="input input-bordered w-full max-w-xs" />
 
-                        <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" required name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
 
                         <input type="submit" value="Order" className="btn btn-secondary w-full max-w-xs text-white" />
                     </form>
@@ -115,4 +108,4 @@ const Purchase = () => {
     );
 };
 
-export default Purchase;
+export default Purchase;;

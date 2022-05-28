@@ -24,13 +24,13 @@ const Payment = () => {
             .then(res => res.json())
             .then(data => setTool(data));
     }, []);
-    console.log("Tool: ", tool);
 
     return (
-        <div>
-            <h1 className='text-3xl'>Pay</h1>
-            <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
-                <div className="card-body">
+        <div className=''>
+            <h1 className='text-3xl mb-10 mt-10'>Pay</h1>
+            <div class="card  bg-base-100 flex-shrink-0 w-50 max-w-md shadow-2xl mb-10 mt-10 ">
+
+                <div class="card-body">
                     <Elements stripe={stripePromise}>
                         <CheckoutForm tool={tool} />
                     </Elements>

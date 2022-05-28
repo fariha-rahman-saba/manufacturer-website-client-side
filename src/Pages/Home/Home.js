@@ -5,7 +5,6 @@ import NewsLetter from './NewsLetter';
 import Achivements from './Achievements';
 import Reviews from './Reviews';
 import Tools from './Tools';
-import './styles/home.css';
 
 const Home = () => {
     return (

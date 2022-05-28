@@ -22,7 +22,10 @@ const Header = () => {
                 <li><Link to="/dashboard">Dashboard</Link></li>
             </>
         }
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li>{user ? <>
+            <div className='uppercase
+            '>{user.displayName}</div>
+            <button className="btn btn-ghost" onClick={logout} >Sign Out</button></> : <Link to="/login">Login</Link>}</li>
     </>;
 
     return (
@@ -39,7 +42,7 @@ const Header = () => {
                         </ul>
                     </div>
 
-                    <Link className="btn btn-ghost normal-case text-xl" to="/">Tools Manufacturer</Link>
+                    <Link className="btn btn-ghost normal-case text-xl" to="/">Tool Mania</Link>
 
 
                 </div>

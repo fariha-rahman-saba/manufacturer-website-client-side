@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
-    const navigate = useNavigate();
 
     useEffect(() => {
         if (user) {
@@ -58,7 +57,6 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            {/* <th>Name</th> */}
                             <th>Tool</th>
                             <th>Payment</th>
                         </tr>
@@ -73,7 +71,28 @@ const MyOrders = () => {
                                     {!order.paid &&
                                         <>
                                             <Link to={`/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>
-                                            <button className='btn btn-xs btn-error ml-2' onClick={() => handleCancel(order._id)}>cancel</button>
+
+                                            {/* <button className='btn btn-xs btn-error ml-2' onClick={() => handleCancel(order._id)}>cancel</button> */}
+
+                                            {/* <td> */}
+                                            <label for="cancel-confirm-modal" class="btn btn-xs btn-error ml-2">Cancel</label>
+                                            {/* </td> */}
+
+                                            <input type="checkbox" id="cancel-confirm-modal" class="modal-toggle" />
+                                            <div class="modal modal-bottom sm:modal-middle">
+                                                <div class="modal-box">
+                                                    <label for="cancel-confirm-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+                                                    <h3 class="font-bold text-lg text-red-500">Are you sure you want to cancel the order?</h3>
+
+                                                    <div class="modal-action">
+                                                        <label for="cancel-confirm-modal">
+                                                            <button onClick={() => handleCancel(order._id)} class="btn btn-xs 
+                    btn-error">Confirm</button>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </>
                                     }
                                     {order.paid && <div>

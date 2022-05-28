@@ -41,7 +41,8 @@ const UserRow = ({ user, index }) => {
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
 
-            <td>                <label for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+            <td>
+                <label for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
             </td>
 
             <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />

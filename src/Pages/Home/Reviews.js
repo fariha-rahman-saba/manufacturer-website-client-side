@@ -15,7 +15,7 @@ const Reviews = () => {
     console.log(reviews);
     return (
         <div>
-            <h1>Reviews</h1>
+            <h1 className='mt-10 mb-10 font-bold text-3xl uppercase text-primary'>Our Customer Reviews</h1>
             <div className='items-center reviews'>
                 {
                     reviews.map(review => <SingleReview key={review.id} review={review}></SingleReview>)

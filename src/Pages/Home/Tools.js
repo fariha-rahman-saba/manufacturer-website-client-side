@@ -13,7 +13,8 @@ const Tools = () => {
             .then(data => setTools(data));
     }, []);
 
-    const displayTools = tools.slice(0, 6);
+    const latestTools = [...tools].reverse();
+    const displayTools = latestTools.slice(0, 6);
 
     const navigate = useNavigate();
     const goToBrowseTools = () => {
@@ -21,7 +22,7 @@ const Tools = () => {
     };
     return (
         <div>
-            <h1 className='mt-10 mb-10 text-3xl font-semibold'>Tools</h1>
+            <h1 className='mt-10 mb-10 text-3xl font-bold uppercase text-primary'>Our Tools</h1>
             <div className='tools'>
                 {
                     displayTools.map(tool => <SingleTool
