@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
@@ -31,6 +32,24 @@ const MyOrders = () => {
                 });
         }
     }, [user]);
+
+    const handleCancel = (id) => {
+        fetch(`http://localhost:5000/order/${id}`, {
+            method: 'DELETE',
+            // headers: {
+            //     // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            // }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount) {
+                    toast.success(`Order is canceled.`);
+                    // setDeletingDoctor(null);
+                    // refetch();
+                }
+            });
+    };
     return (
         <div>
             <h2>My Orders: {orders.length}</h2>
@@ -39,7 +58,7 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
+                            {/* <th>Name</th> */}
                             <th>Tool</th>
                             <th>Payment</th>
                         </tr>
@@ -48,11 +67,16 @@ const MyOrders = () => {
                         {
                             orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
-                                <td>{order.customerName}</td>
+                                {/* <td>{order.customerName}</td> */}
                                 <td>{order.tool}</td>
                                 <td>
-                                    {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(order.price && order.paid) && <div>
+                                    {!order.paid &&
+                                        <>
+                                            <Link to={`/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>
+                                            <button className='btn btn-xs btn-error ml-2' onClick={() => handleCancel(order._id)}>cancel</button>
+                                        </>
+                                    }
+                                    {order.paid && <div>
                                         <p><span className='text-success'>Paid</span></p>
                                         <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
                                     </div>}

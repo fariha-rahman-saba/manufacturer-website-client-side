@@ -16,7 +16,7 @@ const Payment = () => {
     const { id } = useParams();
     const [tool, setTool] = useState({});
     const url = `http://localhost:5000/payment/${id}`;
-    const [user, loading, error] = useAuthState(auth);
+
 
 
     useEffect(() => {

@@ -44,7 +44,7 @@ const AddAReview = () => {
                 <br />
                 <input type="text" placeholder="Description" className="input input-bordered w-full mt-6 max-w-xs" name='desc' />
                 <br />
-                <button className="btn btn-active mt-6 btn-accent w-full max-w-xs">Submit</button>
+                <button className="btn btn-active mt-6 btn-secondary w-full max-w-xs text-white">Submit</button>
                 <ToastContainer />
             </form>
         </div>

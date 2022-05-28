@@ -6,7 +6,6 @@ import './styles/tools.css';
 const Tools = () => {
 
     const [tools, setTools] = useState([]);
-    const [product, setProduct] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:5000/tool')
@@ -22,7 +21,7 @@ const Tools = () => {
     };
     return (
         <div>
-            <h1 className='mt-5'>Tools</h1>
+            <h1 className='mt-10 mb-10 text-3xl font-semibold'>Tools</h1>
             <div className='tools'>
                 {
                     displayTools.map(tool => <SingleTool
@@ -31,7 +30,7 @@ const Tools = () => {
                     ></SingleTool>)
                 }
             </div>
-            <button className="btn btn-active mt-6 btn-accent w-full max-w-xs" onClick={() => goToBrowseTools()}>Browse Tools</button>
+            <button className="btn btn-active mt-6 w-full max-w-xs mb-6" onClick={() => goToBrowseTools()}>Browse Tools</button>
 
         </div>
     );

@@ -61,7 +61,7 @@ const MyProfile = () => {
                 <input type="text" placeholder="LinkedIn Profile Link" className="input input-bordered w-full mt-6 max-w-xs" name='linkedinProfile' />
                 <br />
 
-                <button type="submit" className="btn btn-secondary mt-3 w-100 mb-5">Update Profile</button>
+                <button type="submit" className="btn btn-secondary mt-3 w-100 mb-5 text-white">Update Profile</button>
                 {/* <ToastContainer></ToastContainer> */}
 
             </form>

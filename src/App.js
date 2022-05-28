@@ -22,7 +22,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
-import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 
 function App () {
@@ -35,7 +34,6 @@ function App () {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-portfolio" element={<MyPortfolio />} />
-        <Route path="/addProduct" element={<AddAProduct />}></Route>
         <Route path="/*" element={<NotFound />} />
 
         {/* Private Routes */}
@@ -43,21 +41,19 @@ function App () {
         <Route path='/browse-tools' element={<RequireAuth><BrowseTools /></RequireAuth>}></Route>
         <Route path='/payment/:id' element={<RequireAuth><Payment /></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
-          <Route index element={<MyOrders />}></Route>
-          <Route path="addReview" element={<AddAReview />}></Route>
-          <Route path="my-profile" element={<MyProfile />}></Route>
+          {/* <Route index element={<MyProfile></MyProfile>}></Route> */}
 
-          <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
+          <Route path="my-profile" element={<MyProfile />}></Route>
+          <Route path="my-orders" element={<MyOrders />}></Route>
+          <Route path="addReview" element={<AddAReview />}></Route>
+
+          {/* Admin routes */}
+          <Route path="make-admin" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddAProduct /></RequireAdmin>}></Route>
-          <Route path="make-admin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>}></Route>
           <Route path="manage-tools" element={<RequireAdmin><ManageProducts /></RequireAdmin>}></Route>
           <Route path="manage-orders" element={<RequireAdmin><ManageAllOrders /></RequireAdmin>}></Route>
 
         </Route>
-
-        {/* Admin Routes */}
-        {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route> */}
-        {/* <Route path="users" element={<RequireAdmin><></RequireAdmin>}></Route> */}
       </Routes>
       <Footer />
 

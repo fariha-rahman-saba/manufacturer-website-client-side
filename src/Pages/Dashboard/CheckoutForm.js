@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
-const CheckoutForm = ({ appointment }) => {
+const CheckoutForm = ({ tool }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
@@ -10,7 +12,8 @@ const CheckoutForm = ({ appointment }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const { _id, price, patient, patientName } = appointment;
+    const [user] = useAuthState(auth);
+    const { _id, price_per_unit } = tool;
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -19,7 +22,7 @@ const CheckoutForm = ({ appointment }) => {
                 'content-type': 'application/json',
                 // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify({ price })
+            body: JSON.stringify({ price_per_unit })
         })
             .then(res => res.json())
             .then(data => {
@@ -28,7 +31,7 @@ const CheckoutForm = ({ appointment }) => {
                 }
             });
 
-    }, [price]);
+    }, [price_per_unit]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -58,8 +61,8 @@ const CheckoutForm = ({ appointment }) => {
                 payment_method: {
                     card: card,
                     billing_details: {
-                        name: patientName,
-                        email: patient
+                        name: user.displayName,
+                        email: user.email
                     },
                 },
             },
@@ -84,7 +87,7 @@ const CheckoutForm = ({ appointment }) => {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                    // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(payment)
             }).then(res => res.json())

@@ -16,7 +16,7 @@ const NewsLetter = () => {
                     <input type="text" placeholder="Name" className="input input-bordered mt-6 w-full max-w-xs" name='rating' /><br />
                     <input type="text" placeholder="Email" className="input input-bordered w-full mt-2 max-w-xs" name='desc' />
                     <br />
-                    <button className="btn btn-active mt-6 mb-6 btn-accent w-full max-w-xs">Subscribe</button>
+                    <button className="btn btn-active mt-6 mb-6 btn w-full max-w-xs">Subscribe</button>
                     <ToastContainer />
                 </form>
             </div>

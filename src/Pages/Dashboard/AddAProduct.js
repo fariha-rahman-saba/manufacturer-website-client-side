@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddAProduct = () => {
@@ -16,7 +17,7 @@ const AddAProduct = () => {
 
         const email = user.email;
 
-        const url = 'http://localhost:5000/product';
+        const url = 'http://localhost:5000/tool';
         const product = { email, image, name, desc, minimum_order_quantity, available_quantity, price_per_unit };
 
 
@@ -33,7 +34,7 @@ const AddAProduct = () => {
             .then(result => {
                 console.log(result);
                 event.target.reset();
-                // toast('Review Added');
+                toast('Tool Added');
             });
     };
     return (
@@ -46,7 +47,7 @@ const AddAProduct = () => {
                 <input type="text" placeholder="Minimum Order Quantity" className="input input-bordered w-full mt-6 max-w-xs" name='minimum_order_quantity' /><br />
                 <input type="text" placeholder="Available Quantity" className="input input-bordered w-full mt-6 max-w-xs" name='available_quantity' /><br />
                 <input type="text" placeholder="Price per unit" className="input input-bordered w-full mt-6 max-w-xs" name='price_per_unit' /><br />
-                <button className="btn btn-active mt-6 mb-6 btn-accent w-full max-w-xs">Submit</button>
+                <button className="btn btn-active mt-6 mb-6 btn-secondary w-full max-w-xs text-white">Add</button>
                 {/* <ToastContainer /> */}
             </form>
         </div>

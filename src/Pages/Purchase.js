@@ -83,7 +83,7 @@ const Purchase = () => {
             <h4 className='mt-3'>Name: {tool.name}</h4>
             <p>Description: {tool.short_desc}</p>
 
-            <label for="order-modal" className="btn modal-button">Place Order</label>
+            <label for="order-modal" className="btn btn-secondary modal-button text-white mt-5 mb-6">Place Order</label>
 
             <input type="checkbox" id="order-modal" className="modal-toggle" />
 
@@ -104,7 +104,7 @@ const Purchase = () => {
 
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
 
-                        <input type="submit" value="Order" className="btn btn-secondary w-full max-w-xs" />
+                        <input type="submit" value="Order" className="btn btn-secondary w-full max-w-xs text-white" />
                     </form>
                 </div>
             </div>
