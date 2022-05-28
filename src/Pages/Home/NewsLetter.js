@@ -1,6 +1,5 @@
 import React from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const NewsLetter = () => {
     const handleUpload = (event) => {
@@ -17,7 +16,6 @@ const NewsLetter = () => {
                     <input type="text" placeholder="Email" className="input input-bordered w-full mt-2 max-w-xs" name='desc' />
                     <br />
                     <button className="btn btn-active mt-6 mb-10 w-full max-w-xs">Subscribe</button>
-                    <ToastContainer />
                 </form>
             </div>
         </div>

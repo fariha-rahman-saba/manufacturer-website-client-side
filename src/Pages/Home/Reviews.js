@@ -4,8 +4,8 @@ import './styles/reviews.css';
 
 
 const Reviews = () => {
-    // load reviews
 
+    // load reviews
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/review')

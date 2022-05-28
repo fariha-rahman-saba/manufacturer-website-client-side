@@ -8,18 +8,13 @@ const Purchase = () => {
     const url = `http://localhost:5000/purchase/${id}`;
     const [tool, setTool] = useState({});
 
-
-
-    const [user, loading, error] = useAuthState(auth);
-
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data));
     }, []);
-
-    console.log("Tool: ", tool);
 
     const navigate = useNavigate();
 
@@ -40,8 +35,8 @@ const Purchase = () => {
         fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
-                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                'content-type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(order)
         })
@@ -76,8 +71,6 @@ const Purchase = () => {
 
             <label for="order-modal" className="btn btn-secondary modal-button text-white mt-5 mb-10 w-60">Place Order</label>
 
-
-
             <input type="checkbox" id="order-modal" className="modal-toggle" />
 
             <div className="modal modal-bottom sm:modal-middle">
@@ -102,8 +95,6 @@ const Purchase = () => {
                 </div>
             </div>
         </div>
-
-
 
     );
 };
