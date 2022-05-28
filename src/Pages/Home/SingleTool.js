@@ -11,16 +11,16 @@ const SingleTool = ({ tool }) => {
     };
     return (
 
-        <div class="card w-90 bg-base-100 shadow-xl ">
+        <div className="card w-90 bg-base-100 shadow-xl ">
             <figure><img src={image} alt="tool image" /></figure>
-            <div class="card-body">
+            <div className="card-body">
                 <h4 className='mt-3 text-xl font-semibold'>{name}</h4>
                 <p>{short_desc}</p>
                 <h5 className=''>Minimum Order Quantity: {minimum_order_quantity}</h5>
                 <h5 className=''>Available Quantity: {available_quantity}</h5>
                 <h5 className=''>Price Per Unit: {price_per_unit}</h5>
-                <div class="card-actions justify-center">
-                    <button onClick={() => goToPurchcase(_id)} class="btn btn-secondary text-white w-60">Buy Now</button>
+                <div className="card-actions justify-center">
+                    <button onClick={() => goToPurchcase(_id)} className="btn btn-secondary text-white w-60">Buy Now</button>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ const UserRow = ({ user, index }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://fathomless-basin-14338.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
         })
             .then(res => res.json())
@@ -17,7 +17,7 @@ const UserRow = ({ user, index }) => {
 
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://fathomless-basin-14338.herokuapp.com/user/${email}`, {
             method: 'DELETE',
             // headers: {
             //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,19 +39,19 @@ const UserRow = ({ user, index }) => {
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
 
             <td>
-                <label for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                <label for="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
             </td>
 
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <label for="delete-confirm-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <label for="delete-confirm-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-                    <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete?</h3>
+                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete?</h3>
 
-                    <div class="modal-action">
+                    <div className="modal-action">
                         <label for="delete-confirm-modal">
-                            <button onClick={() => handleDelete()} class="btn btn-xs 
+                            <button onClick={() => handleDelete()} className="btn btn-xs 
                     btn-error"> Delete</button>
                         </label>
                     </div>

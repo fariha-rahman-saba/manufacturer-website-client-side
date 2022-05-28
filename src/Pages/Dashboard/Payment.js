@@ -11,7 +11,7 @@ const Payment = () => {
 
     const { id } = useParams();
     const [tool, setTool] = useState({});
-    const url = `http://localhost:5000/payment/${id}`;
+    const url = `https://fathomless-basin-14338.herokuapp.com/payment/${id}`;
 
     useEffect(() => {
         fetch(url)
@@ -22,9 +22,9 @@ const Payment = () => {
     return (
         <div className=''>
             <h1 className='text-3xl mb-10 mt-10'>Pay</h1>
-            <div class="card  bg-base-100 flex-shrink-0 w-50 max-w-md shadow-2xl mb-10 mt-10 ">
+            <div className="card  bg-base-100 flex-shrink-0 w-50 max-w-md shadow-2xl mb-10 mt-10 ">
 
-                <div class="card-body">
+                <div className="card-body">
                     <Elements stripe={stripePromise}>
                         <CheckoutForm tool={tool} />
                     </Elements>
