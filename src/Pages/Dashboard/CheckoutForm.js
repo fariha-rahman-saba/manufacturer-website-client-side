@@ -16,7 +16,7 @@ const CheckoutForm = ({ tool }) => {
     const { _id, price_per_unit } = tool;
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/create-payment-intent', {
+    //     fetch('https://fathomless-basin-14338.herokuapp.com/create-payment-intent', {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json',
@@ -84,7 +84,7 @@ const CheckoutForm = ({ tool }) => {
                 tool: _id,
                 transactionId: paymentIntent.id
             };
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://fathomless-basin-14338.herokuapp.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

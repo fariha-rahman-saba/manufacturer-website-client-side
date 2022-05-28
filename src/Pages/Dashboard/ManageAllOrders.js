@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/allOrder`, {
+            fetch(`https://fathomless-basin-14338.herokuapp.com/allOrder`, {
                 method: 'GET',
                 // headers: {
                 //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
     }, [user]);
 
     const handleCancel = (id) => {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://fathomless-basin-14338.herokuapp.com/order/${id}`, {
             method: 'DELETE',
             // headers: {
             //     authorization: `Bearer ${localStorage.getItem('accessToken')}`

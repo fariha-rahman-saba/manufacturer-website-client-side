@@ -17,7 +17,7 @@ const AddAProduct = () => {
 
         const email = user.email;
 
-        const url = 'http://localhost:5000/tool';
+        const url = 'https://fathomless-basin-14338.herokuapp.com/tool';
         const product = { email, image, name, desc, minimum_order_quantity, available_quantity, price_per_unit };
 
 

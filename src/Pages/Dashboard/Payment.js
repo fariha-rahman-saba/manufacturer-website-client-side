@@ -11,7 +11,7 @@ const Payment = () => {
 
     const { id } = useParams();
     const [tool, setTool] = useState({});
-    const url = `http://localhost:5000/payment/${id}`;
+    const url = `https://fathomless-basin-14338.herokuapp.com/payment/${id}`;
 
     useEffect(() => {
         fetch(url)

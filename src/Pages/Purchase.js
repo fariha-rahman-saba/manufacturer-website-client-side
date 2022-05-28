@@ -5,7 +5,7 @@ import auth from '../firebase.init';
 
 const Purchase = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/purchase/${id}`;
+    const url = `https://fathomless-basin-14338.herokuapp.com/purchase/${id}`;
     const [tool, setTool] = useState({});
 
     const [user] = useAuthState(auth);
@@ -32,7 +32,7 @@ const Purchase = () => {
             phone: event.target.phone.value
         };
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://fathomless-basin-14338.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

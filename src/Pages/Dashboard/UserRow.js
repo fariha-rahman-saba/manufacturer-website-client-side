@@ -5,7 +5,7 @@ const UserRow = ({ user, index }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://fathomless-basin-14338.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
         })
             .then(res => res.json())
@@ -17,7 +17,7 @@ const UserRow = ({ user, index }) => {
 
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://fathomless-basin-14338.herokuapp.com/user/${email}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
