@@ -26,19 +26,18 @@ const AddAProduct = () => {
             method: 'POST',
             body: JSON.stringify(product),
             headers: {
-                // 'authorization': `${user.email}`,
+                'authorization': `${user.email}`,
                 'Content-type': 'application/json; charset=UTF-8',
 
             },
         }).then(res => res.json())
             .then(result => {
-                console.log(result);
                 event.target.reset();
                 toast('Tool Added');
             });
     };
     return (
-        <div>
+        <div className='addProduct'>
             <h1 className='text-3xl mt-6'>Add Product</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Image URL" className="input input-bordered mt-6 w-full max-w-xs" name='image' /><br />
@@ -48,7 +47,6 @@ const AddAProduct = () => {
                 <input type="text" placeholder="Available Quantity" className="input input-bordered w-full mt-6 max-w-xs" name='available_quantity' /><br />
                 <input type="text" placeholder="Price per unit" className="input input-bordered w-full mt-6 max-w-xs" name='price_per_unit' /><br />
                 <button className="btn btn-active mt-6 mb-6 btn-secondary w-full max-w-xs text-white">Add</button>
-                {/* <ToastContainer /> */}
             </form>
         </div>
     );

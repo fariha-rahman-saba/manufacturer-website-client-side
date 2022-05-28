@@ -23,7 +23,6 @@ const Dashboard = () => {
                         !admin && <>
                             <li><Link to="/dashboard/my-orders">My Orders</Link></li>
                             <li><Link to="/dashboard/addReview">Add a Review</Link></li>
-
                         </>
                     }
 
@@ -32,9 +31,6 @@ const Dashboard = () => {
                         <li><Link to="/dashboard/addProduct">Add Tool</Link></li>
                         <li><Link to="/dashboard/manage-tools">Manage Tools</Link></li>
                         <li><Link to="/dashboard/manage-orders">Manage Orders</Link></li>
-
-
-
                     </>}
                 </ul>
 

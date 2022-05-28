@@ -4,28 +4,24 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    // const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user'
-    //     // ,
-    //     //  {
-    //     //     // method: 'GET',
-    //     //     // headers: {
-    //     //     //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //     //     // }
-    //     // }
-    // ).then(res => res.json()));
-    // if (isLoading) {
-    //     return <Loading></Loading>;
-    // }
+
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('http://localhost:5000/user',
+            {
+                method: 'GET',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);
 
+
     return (
         <div>
-            {/* <h2 className="text-2xl">All Users: {users.length}</h2> */}
+            <h2 className="text-2xl">All Users: {users.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

@@ -20,7 +20,7 @@ const CheckoutForm = ({ tool }) => {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify({ price_per_unit })
         })
@@ -87,7 +87,7 @@ const CheckoutForm = ({ tool }) => {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
-                    // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(payment)
             }).then(res => res.json())

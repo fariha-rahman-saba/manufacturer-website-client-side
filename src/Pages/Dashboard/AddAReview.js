@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddAReview = () => {
@@ -25,13 +25,12 @@ const AddAReview = () => {
             method: 'POST',
             body: JSON.stringify(review),
             headers: {
-                // 'authorization': `${user.email}`,
+                'authorization': `${user.email}`,
                 'Content-type': 'application/json; charset=UTF-8',
 
             },
         }).then(res => res.json())
             .then(result => {
-                console.log(result);
                 event.target.reset();
                 toast('Review Added');
             });
@@ -45,7 +44,6 @@ const AddAReview = () => {
                 <input type="text" placeholder="Description" className="input input-bordered w-full mt-6 max-w-xs" name='desc' />
                 <br />
                 <button className="btn btn-active mt-6 btn-secondary w-full max-w-xs text-white">Submit</button>
-                <ToastContainer />
             </form>
         </div>
     );

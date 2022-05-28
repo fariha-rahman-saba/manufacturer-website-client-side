@@ -19,17 +19,15 @@ const UserRow = ({ user, index }) => {
     const handleDelete = () => {
         fetch(`http://localhost:5000/user/${email}`, {
             method: 'DELETE',
-            // headers: {
-            //     // authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 if (data.deletedCount) {
                     toast.success(`User is deleted.`);
-                    // setDeletingDoctor(null);
-                    // refetch();
                 }
             });
     };
@@ -37,7 +35,6 @@ const UserRow = ({ user, index }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            {/* <td>{displayName}</td> */}
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
 

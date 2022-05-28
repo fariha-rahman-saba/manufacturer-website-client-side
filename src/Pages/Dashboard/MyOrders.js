@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         if (user) {
             fetch(`http://localhost:5000/order?customerEmail=${user.email}`, {
                 method: 'GET',
-                // headers: {
-                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                // }
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
             })
                 .then(res => {
                     console.log('res', res);
-                    // if (res.status === 401 || res.status === 403) {
-                    //     signOut(auth);
-                    //     localStorage.removeItem('accessToken');
-                    //     navigate('/');
-                    // }
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
+                    }
                     return res.json();
                 })
                 .then(data => {
@@ -35,17 +38,14 @@ const MyOrders = () => {
     const handleCancel = (id) => {
         fetch(`http://localhost:5000/order/${id}`, {
             method: 'DELETE',
-            // headers: {
-            //     // authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.deletedCount) {
                     toast.success(`Order is canceled.`);
-                    // setDeletingDoctor(null);
-                    // refetch();
                 }
             });
     };
@@ -65,18 +65,13 @@ const MyOrders = () => {
                         {
                             orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
-                                {/* <td>{order.customerName}</td> */}
                                 <td>{order.tool}</td>
                                 <td>
                                     {!order.paid &&
                                         <>
                                             <Link to={`/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>
 
-                                            {/* <button className='btn btn-xs btn-error ml-2' onClick={() => handleCancel(order._id)}>cancel</button> */}
-
-                                            {/* <td> */}
                                             <label for="cancel-confirm-modal" class="btn btn-xs btn-error ml-2">Cancel</label>
-                                            {/* </td> */}
 
                                             <input type="checkbox" id="cancel-confirm-modal" class="modal-toggle" />
                                             <div class="modal modal-bottom sm:modal-middle">
@@ -102,8 +97,6 @@ const MyOrders = () => {
                                 </td>
                             </tr>)
                         }
-
-
                     </tbody>
                 </table>
             </div>
