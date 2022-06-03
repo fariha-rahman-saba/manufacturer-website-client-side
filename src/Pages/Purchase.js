@@ -62,7 +62,7 @@ const Purchase = () => {
                     <p>{short_desc}</p>
                     <h5 className=''>Minimum Order Quantity: {minimum_order_quantity}</h5>
                     <h5 className=''>Available Quantity: {available_quantity}</h5>
-                    <h5 className=''>Price Per Unit: {price_per_unit}</h5>
+                    <h5 className=''>Price Per Unit: ${price_per_unit}</h5>
 
 
                 </div>

@@ -1,17 +1,17 @@
 [
     {
-        "email": "Alex",
-        "desc": "If you're a mere beginner, then you can trust this girl and can put your time into her content. I can assure you that it'll be worth it.",
-        "rating": 4.5
+        "displayName": "Akhi",
+        "rating": "4.5",
+        "desc": "Can be improved"
     },
     {
-        "email": "Morgan",
-        "desc": "For everyone who wants to level up their #Coding and #Dev skills - seriously, she is the best teacher for you",
-        "rating": 4.2
+        "displayName": "Fariha Rahman Saba",
+        "rating": "5",
+        "desc": "amazing"
     },
     {
-        "email": "Eva",
-        "desc": "Both basic and advanced stacks are covered, and one can learn according to his skill levels",
-        "rating": 3.9
+        "displayName": "Eva",
+        "rating": "3.5",
+        "desc": "Good manufacturer"
     }
 ]

@@ -1,67 +1,19 @@
 [
     {
-        "name": "Complete Python Mastery",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BFMMlbcQvml9HSqXcvNp",
-        "short_desc": "Everything you need to program in Python in one course (includes 3 real-world projects)",
+        "name": "Screw Driver",
+        "image": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png",
+        "short_desc": "A screwdriver is a tool, manual or powered, used for driving screws.",
         "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "$14.99"
-    },
-    {
-        "name": "The Ultimate HTML/CSS Mastery Series",
-        "image": "https://www.filepicker.io/api/file/INZsH6XtRIqQqxvYGP6Q",
-        "short_desc": "Everything you need to build fast and beautiful websites with HTML5 and CSS3 in one bundle",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "$14.99"
-    },
-    {
-        "name": "The Ultimate Java Mastery Series",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/t12BZqmRoulvCTDhoYie",
-        "short_desc": "From Java zero to hero - Master the world's most popular coding language",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "$14.99"
-    },
-    {
-        "name": "The Ultimate React Native Series",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/4C6yPDywSUeWYLyg1h9G",
-        "short_desc": "Everything you need to build and distribute professional-quality apps with React Native",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "$14.99"
-    },
-    {
-        "name": "The Ultimate Design Patterns",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/rPqIrBIbRZsdQhtoGnjp",
-        "short_desc": "Learn to design maintainable, extensible object-oriented software with confidence",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "$14.99"
-    },
-    {
-        "name": "The Ultimate Data Structures & Algorithms Course",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/FjpqrSFwSvGCTL3cCqPt",
-        "short_desc": "Ace your coding job interview. Learn to write better and faster code.",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
+        "available_quantity": "500",
         "price_per_unit": "14.99"
     },
     {
-        "name": "Complete Python Mastery",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BFMMlbcQvml9HSqXcvNp",
-        "short_desc": "Everything you need to program in Python in one course (includes 3 real-world projects)",
-        "minimum_order_quantity": "5",
+        "name": "Tool Box",
+        "image": "https://facom.com.pl/29255/cme16-set-of-76-piece-electronic-tools.jpg",
+        "short_desc": "Uultimate Combo",
+        "minimum_order_quantity": "1",
         "available_quantity": "5",
-        "price_per_unit": "14.99"
-    },
-    {
-        "name": "The Ultimate HTML/CSS Mastery Series",
-        "image": "https://www.filepicker.io/api/file/INZsH6XtRIqQqxvYGP6Q",
-        "short_desc": "Everything you need to build fast and beautiful websites with HTML5 and CSS3 in one bundle",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "14.99"
+        "price_per_unit": "24.99"
     },
     {
         "name": "The Ultimate Java Mastery Series",
@@ -72,27 +24,35 @@
         "price_per_unit": "14.99"
     },
     {
-        "name": "The Ultimate React Native Series",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/4C6yPDywSUeWYLyg1h9G",
-        "short_desc": "Everything you need to build and distribute professional-quality apps with React Native",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "14.99"
+        "name": "Wrench",
+        "image": "https://www.harborfreight.com/media/catalog/product/cache/9fc4a8332f9638515cd199dd0f9238da/6/7/67150_W3.jpg",
+        "short_desc": "A wrench or spanner is a tool used to provide grip and mechanical advantage in applying torque to turn objects",
+        "minimum_order_quantity": "10",
+        "available_quantity": "150",
+        "price_per_unit": "9.99"
     },
     {
-        "name": "The Ultimate Design Patterns",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/rPqIrBIbRZsdQhtoGnjp",
-        "short_desc": "Learn to design maintainable, extensible object-oriented software with confidence",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "14.99"
+        "name": "Hammer",
+        "image": "https://m.media-amazon.com/images/I/71tTWyypTKL._AC_SL1500_.jpg",
+        "short_desc": "hammer, tool designed for pounding or delivering repeated blows.",
+        "minimum_order_quantity": "1",
+        "available_quantity": "52",
+        "price_per_unit": "4.99"
     },
     {
-        "name": "The Ultimate Data Structures & Algorithms Course",
-        "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/FjpqrSFwSvGCTL3cCqPt",
-        "short_desc": "Ace your coding job interview. Learn to write better and faster code.",
-        "minimum_order_quantity": "5",
-        "available_quantity": "5",
-        "price_per_unit": "14.99"
+        "name": "Hand Saw",
+        "image": "https://static-01.daraz.com.bd/p/00e55ee0f315fcae027380e495a1b2ce.jpg",
+        "short_desc": "hammer, tool designed for pounding or delivering repeated blows.",
+        "minimum_order_quantity": "3",
+        "available_quantity": "51",
+        "price_per_unit": "4.99"
+    },
+    {
+        "name": "Plier",
+        "image": "https://m.media-amazon.com/images/I/71tTWyypTKL._AC_SL1500_.jpg",
+        "short_desc": "Pliers are a hand tool used to hold objects firmly, possibly developed from tongs used to handle hot metal in Bronze Age Europe.",
+        "minimum_order_quantity": "10",
+        "available_quantity": "1000",
+        "price_per_unit": "19.99"
     }
 ]
