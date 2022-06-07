@@ -27,3 +27,5 @@ A list of technologies used within the project:
 * I have implemented email and password authentication and google authentication
 * I have created admin panel and dashboard
 * I have integrated payment option.
+* User can sign in as admin or as a normal user. With admin role user can access special functionalities. Admin can add products, make other users admin, manage products etc.
+* User can add reviews, subscribe for newsletters, order products, cancel orders, make payments, see order history, update profile and many other functionalities.
